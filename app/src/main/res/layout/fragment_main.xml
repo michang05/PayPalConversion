@@ -1,0 +1,171 @@
+<ScrollView android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="ph.mikeymike.paypalconversion.MainActivityFragment"
+                tools:showIn="@layout/activity_main">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pray that it would be nice"
+        android:id="@+id/tv_notice"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_weight="1"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_amount_in_origin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_above="@+id/ll_amount_in"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:id="@+id/tv_amount_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert from"
+            android:textSize="15sp"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/et_country_currency_code_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD"
+            android:gravity="center"
+            android:hint="Currency Code"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_amount_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@id/tv_notice"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:id="@+id/tv_amount_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:textSize="15sp"
+            android:layout_weight="1"/>
+
+
+
+        <EditText
+            android:id="@+id/et_amount_in"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Amount to Convert"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_amount_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_below="@id/ll_amount_in"
+        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:id="@+id/tv_amount_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert to"
+            android:textSize="15sp"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/et_country_currency_code_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PHP"
+            android:gravity="center"
+            android:hint="Currency Code"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Current Rate"
+        android:id="@+id/tv_current_rate_label"
+        android:layout_below="@+id/btn_check"
+        android:layout_alignLeft="@+id/ll_amount_out"
+        android:layout_alignStart="@+id/ll_amount_out"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="100...LOL"
+        android:id="@+id/tv_current_rate"
+        android:layout_marginRight="39dp"
+        android:layout_marginEnd="39dp"
+        android:layout_alignTop="@+id/tv_current_rate_label"
+        android:layout_alignRight="@+id/ll_amount_out"
+        android:layout_alignEnd="@+id/ll_amount_out"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show me some Love!"
+        android:id="@+id/btn_check"
+        android:layout_below="@id/ll_amount_out"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="49dp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Drum rolls ..."
+        android:textColor="@android:color/holo_red_dark"
+        android:id="@+id/tv_amount_result"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="32dp"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/tv_current_rate_label"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/tv_amount_result"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/tv_current_rate_label"
+        android:layout_toEndOf="@+id/tv_current_rate_label"/>
+
+
+</RelativeLayout>
+</ScrollView>
